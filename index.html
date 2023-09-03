@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Real-Time Spotify Music Tracking System</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/style.css">
+    <script src="./src/script.js"></script>
+</head>
+
+<body>
+    <audio src="./src/loop.mp3" id="audio" name="audio" autoplay="autoplay" muted preload="auto"
+        style="display: none;" type="audio/mpeg"></audio>
+    <div id="app">
+
+    </div>
+</body>
+
+<script>
+    fetchCurrentTrack();
+
+    setInterval(() => {
+        fetchCurrentTrack();
+    }, 3000);
+</script>
+
+</html>

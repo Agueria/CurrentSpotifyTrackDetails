@@ -1,0 +1,68 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: #fafafa;
+}
+
+.music-card {
+  border-radius: 6px;
+  background: #36393e;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 480px;
+}
+
+.music-card .image img {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+  height: 300px;
+  width: 300px;
+}
+
+.music-card .wave, .music-card .wave2 {
+  position: absolute;
+  height: 750px;
+  width: 750px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -70%;
+  margin-top: -130%;
+  border-radius: 40%;
+  animation: spin 3000ms infinite linear;
+}
+
+.music-card .info {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.music-card .info .title {
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Playfair Display";
+  color: rgb(255, 255, 255);
+  margin-bottom: 8px;
+}
+
+.music-card .info .artist, .music-card .info .artist a {
+  font-family: "Source Sans Pro";
+  color: #ffffff;
+  font-size: 1.00em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
